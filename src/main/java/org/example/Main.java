@@ -9,16 +9,16 @@ After your function finds the first needle it should return a message (as a stri
 "found the needle at position " plus the index it found the needle */
 class Main {
     public static void main(String[] args) {
-        String[] haystack = {"the", "quick", "brown", "fox", "always", "pushes", "the", "needle", ".", "happy", "new", "year", "by.", "the", "way", ", Hello ! "};
-
+//        String[] haystack = {"the", "quick", "brown", "fox", "always", "pushes", "the", "needle", ".", "happy", "new", "year", "by.", "the", "way", ", Hello ! "};
+        String[] haystack = {};
         String message = findNeedle(haystack);
         System.out.println(message);
     }
 
     public static String findNeedle(String[] haystack) {
         // Your code here
-        if(haystack == null) {
-            return "Haystack is null";
+        if(haystack == null || haystack.length == 0) {
+            return "Haystack is empty";
         }
 
         int hayStackLength = haystack.length;
